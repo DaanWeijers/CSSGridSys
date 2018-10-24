@@ -75,6 +75,7 @@
 	.m-col-eleven		{ grid-template-columns: repeat(11, 1fr); grid-column-end: span 11; }
 	.m-col-twelve		{ grid-template-columns: repeat(12, 1fr); grid-column-end: span 12; }
 
+	.m-offset-zero		{ grid-column-start: auto; }
 	.m-offset-one		{ grid-column-start: 2; }
 	.m-offset-two		{ grid-column-start: 3; }
 	.m-offset-three		{ grid-column-start: 4; }
@@ -94,7 +95,7 @@
 /********************/
 @media (min-width: 960px) {
 	:root {
-		--colGap: 20px;
+		--colGap: 10px;
 		--rowGap: 0px;
 	}
 
@@ -114,6 +115,7 @@
 	.l-col-eleven		{ grid-template-columns: repeat(11, 1fr); grid-column-end: span 11; }
 	.l-col-twelve		{ grid-template-columns: repeat(12, 1fr); grid-column-end: span 12; }
 
+	.l-offset-zero		{ grid-column-start: 1; }
 	.l-offset-one		{ grid-column-start: 2; }
 	.l-offset-two		{ grid-column-start: 3; }
 	.l-offset-three		{ grid-column-start: 4; }
@@ -132,7 +134,7 @@
 /********************/
 @media (min-width: 1280px) {
 	:root {
-		--colGap: 20px;
+		--colGap: 10px;
 		--rowGap: 0px;
 	}
 
@@ -152,6 +154,7 @@
 	.xl-col-eleven		{ grid-template-columns: repeat(11, 1fr); grid-column-end: span 11; }
 	.xl-col-twelve		{ grid-template-columns: repeat(12, 1fr); grid-column-end: span 12; }
 
+	.xl-offset-zero		{ grid-column-start: 1; }
 	.xl-offset-one		{ grid-column-start: 2; }
 	.xl-offset-two		{ grid-column-start: 3; }
 	.xl-offset-three	{ grid-column-start: 4; }

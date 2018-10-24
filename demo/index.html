@@ -6,9 +6,122 @@
 
 	<link rel="stylesheet" href="css/normalise.css">
 	<link rel="stylesheet" href="css/gridsys.css">
+	<style>
+		html, body {
+			height: 100%;
+		}
+		.grid > div {
+			background: #abc;
+		}
+		.grid > div > div {
+			background: #def;
+		}
+
+		.grid div {
+			min-height: 40px;
+			box-sizing: border-box;
+			padding: 1em;
+			padding-right: 0;
+			font-family: helvetica, arial, sans-serif; 
+		}
+
+		:root {
+			--rowGap: 20px;
+		}
+
+		.backgroundGrid {
+			position: absolute;
+			top: 0; 
+			left: 0;
+			z-index: -1;
+			height: 100%;
+			width: 100%;
+			grid-row-gap: 0;
+		}
+		.backgroundGrid div {
+			background: #efefef;
+		}
+		.mob, .nomob { display: none; margin-left: 4px;}
+		.mob::before, .nomob::before { content: '-'; margin-right: 4px;}
+
+		@media (max-width: 599px) {
+			.mob { display: inline; }
+		}
+		@media (min-width: 600px) {
+			.nomob { display: inline; }
+		}
+	</style>
 </head>
 <body>
-	<section class="grid">
+	<section class="grid main s-col-six m-col-twelve">
+		<div class="s-col-six m-col-twelve">a<p class="mob">6</p><p class="nomob">12</p></div>
+		<div class="">
+			b<p class="mob">1</p><p class="nomob">1</p>
+		</div>
+		<div class="s-col-five m-col-eleven">
+			c<p class="mob">5</p><p class="nomob">11</p>
+		</div>
+		<div class="s-col-two m-col-two">
+			d<p class="mob">2</p><p class="nomob">2</p>
+		</div>
+		<div class="s-col-four m-col-ten">
+			e<p class="mob">4</p><p class="nomob">10</p>
+		</div>
+		<div class="s-col-three m-col-three">
+			f<p class="mob">3</p><p class="nomob">3</p>
+		</div>
+		<div class="s-col-three m-col-nine">
+			g<p class="mob">3</p><p class="nomob">9</p>
+		</div>
+		<div class="s-col-three s-offset-one m-col-four m-offset-zero">
+			h<p class="mob">3, offset 1</p><p class="nomob">4</p>
+		</div>
+		<div class="s-col-three s-offset-two m-col-eight m-offset-zero">
+			i<p class="mob">3, offset 2</p><p class="nomob">8</p>
+		</div>
+		<div class="s-col-three s-offset-three m-col-five m-offset-zero">
+			j<p class="mob">3, offset 3</p><p class="nomob">5</p>
+		</div>
+		<div class="s-col-six m-col-seven">
+			k<p class="mob">6</p><p class="nomob">7</p>
+		</div>
+		<div class="s-col-six m-col-six">
+			l<p class="mob">6</p><p class="nomob">6</p>
+		</div>
+		<div class="s-col-six m-col-six">
+			m<p class="mob">6</p><p class="nomob">6</p>
+		</div>
+		<div class="s-col-six m-col-six m-offset-one">
+			n<p class="mob">6</p><p class="nomob">6, offset 1</p>
+		</div>
+		<div class="s-col-six m-col-six m-offset-two">
+			o<p class="mob">6</p><p class="nomob">6, offset 2</p>
+		</div>
+		<div class="s-col-six m-col-six m-offset-three">
+			p<p class="mob">6</p><p class="nomob">6, offset 3</p>
+		</div>
+		<div class="s-col-six m-col-six m-offset-four">
+			q<p class="mob">6</p><p class="nomob">6, offset 4</p>
+		</div>
+		<div class="s-col-six m-col-six m-offset-five">
+			r<p class="mob">6</p><p class="nomob">6, offset 5</p>
+		</div>
+		<div class="s-col-six m-col-six m-offset-six">
+			s<p class="mob">6</p><p class="nomob">6, offset 6</p>
+		</div>
 	</section>
+
+	<section class="grid s-col-six m-col-twelve backgroundGrid"><div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div></section>
 </body>
 </html>
