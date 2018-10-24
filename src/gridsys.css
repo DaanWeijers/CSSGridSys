@@ -1,0 +1,158 @@
+:root {
+	--colGap: 1.5%;
+	--rowGap: 0px;
+
+	--basicColCount: 12;
+	--maxWidth: 960px;
+}
+
+.grid {
+	width: var(--maxWidth);
+
+	display: grid;
+	grid-template-columns: repeat(var(--basicColCount), 1fr);
+	grid-column-gap: var(--colGap);
+	grid-row-gap: var(--rowGap);
+}
+
+.grid.main {
+	width: 100%;
+}
+
+.grid .grid {
+	width: auto;
+}
+
+.grid .bottom { align-self: end; }
+
+.s-col-two			{ grid-template-columns: repeat(2, 1fr); grid-column-end: span 2; }
+.s-col-three		{ grid-template-columns: repeat(3, 1fr); grid-column-end: span 3; }
+.s-col-four			{ grid-template-columns: repeat(4, 1fr); grid-column-end: span 4; }
+.s-col-five			{ grid-template-columns: repeat(5, 1fr); grid-column-end: span 5; }
+.s-col-six 			{ grid-template-columns: repeat(6, 1fr); grid-column-end: span 6; }
+.s-col-seven		{ grid-template-columns: repeat(7, 1fr); grid-column-end: span 7; }
+.s-col-eight		{ grid-template-columns: repeat(8, 1fr); grid-column-end: span 8; }
+.s-col-nine			{ grid-template-columns: repeat(9, 1fr); grid-column-end: span 9; }
+.s-col-ten			{ grid-template-columns: repeat(10, 1fr); grid-column-end: span 10; }
+.s-col-eleven		{ grid-template-columns: repeat(11, 1fr); grid-column-end: span 11; }
+.s-col-twelve		{ grid-template-columns: repeat(12, 1fr); grid-column-end: span 12; }
+
+.s-offset-one		{ grid-column-start: 2; }
+.s-offset-two		{ grid-column-start: 3; }
+.s-offset-three		{ grid-column-start: 4; }
+.s-offset-four		{ grid-column-start: 5; }
+.s-offset-five		{ grid-column-start: 6; }
+.s-offset-six		{ grid-column-start: 7; }
+.s-offset-seven		{ grid-column-start: 8; }
+.s-offset-eight		{ grid-column-start: 9; }
+.s-offset-nine		{ grid-column-start: 10; }
+.s-offset-ten		{ grid-column-start: 11; }
+.s-offset-eleven	{ grid-column-start: 12; }
+
+
+@media (min-width: 600px) {
+	:root {
+		--colGap: 10px;
+		--rowGap: 0px;
+	}
+
+	.grid.main { 
+		/* max-width: 854px; */
+	}
+
+	.m-col-two			{ grid-template-columns: repeat(2, 1fr); grid-column-end: span 2; }
+	.m-col-three		{ grid-template-columns: repeat(3, 1fr); grid-column-end: span 3; }
+	.m-col-four			{ grid-template-columns: repeat(4, 1fr); grid-column-end: span 4; }
+	.m-col-five			{ grid-template-columns: repeat(5, 1fr); grid-column-end: span 5; }
+	.m-col-six 			{ grid-template-columns: repeat(6, 1fr); grid-column-end: span 6; }
+	.m-col-seven		{ grid-template-columns: repeat(7, 1fr); grid-column-end: span 7; }
+	.m-col-eight		{ grid-template-columns: repeat(8, 1fr); grid-column-end: span 8; }
+	.m-col-nine			{ grid-template-columns: repeat(9, 1fr); grid-column-end: span 9; }
+	.m-col-ten			{ grid-template-columns: repeat(10, 1fr); grid-column-end: span 10; }
+	.m-col-eleven		{ grid-template-columns: repeat(11, 1fr); grid-column-end: span 11; }
+	.m-col-twelve		{ grid-template-columns: repeat(12, 1fr); grid-column-end: span 12; }
+
+	.m-offset-one		{ grid-column-start: 2; }
+	.m-offset-two		{ grid-column-start: 3; }
+	.m-offset-three		{ grid-column-start: 4; }
+	.m-offset-four		{ grid-column-start: 5; }
+	.m-offset-five		{ grid-column-start: 6; }
+	.m-offset-six		{ grid-column-start: 7; }
+	.m-offset-seven		{ grid-column-start: 8; }
+	.m-offset-eight		{ grid-column-start: 9; }
+	.m-offset-nine		{ grid-column-start: 10; }
+	.m-offset-ten		{ grid-column-start: 11; }
+	.m-offset-eleven	{ grid-column-start: 12; }
+}
+
+@media (min-width: 960px) {
+	:root {
+		--colGap: 20px;
+		--rowGap: 0px;
+	}
+
+	.grid.main { 
+		/* max-width: 960px; */
+	}
+
+	.l-col-two			{ grid-template-columns: repeat(2, 1fr); grid-column-end: span 2; }
+	.l-col-three		{ grid-template-columns: repeat(3, 1fr); grid-column-end: span 3; }
+	.l-col-four			{ grid-template-columns: repeat(4, 1fr); grid-column-end: span 4; }
+	.l-col-five			{ grid-template-columns: repeat(5, 1fr); grid-column-end: span 5; }
+	.l-col-six 			{ grid-template-columns: repeat(6, 1fr); grid-column-end: span 6; }
+	.l-col-seven		{ grid-template-columns: repeat(7, 1fr); grid-column-end: span 7; }
+	.l-col-eight		{ grid-template-columns: repeat(8, 1fr); grid-column-end: span 8; }
+	.l-col-nine			{ grid-template-columns: repeat(9, 1fr); grid-column-end: span 9; }
+	.l-col-ten			{ grid-template-columns: repeat(10, 1fr); grid-column-end: span 10; }
+	.l-col-eleven		{ grid-template-columns: repeat(11, 1fr); grid-column-end: span 11; }
+	.l-col-twelve		{ grid-template-columns: repeat(12, 1fr); grid-column-end: span 12; }
+
+	.l-offset-one		{ grid-column-start: 2; }
+	.l-offset-two		{ grid-column-start: 3; }
+	.l-offset-three		{ grid-column-start: 4; }
+	.l-offset-four		{ grid-column-start: 5; }
+	.l-offset-five		{ grid-column-start: 6; }
+	.l-offset-six		{ grid-column-start: 7; }
+	.l-offset-seven		{ grid-column-start: 8; }
+	.l-offset-eight		{ grid-column-start: 9; }
+	.l-offset-nine		{ grid-column-start: 10; }
+	.l-offset-ten		{ grid-column-start: 11; }
+	.l-offset-eleven	{ grid-column-start: 12; }
+}
+
+@media (min-width: 1280px) {
+	:root {
+		--colGap: 20px;
+		--rowGap: 0px;
+	}
+
+	.grid.main { 
+		/* max-width: 960px; */
+	}
+
+	.xl-col-two			{ grid-template-columns: repeat(2, 1fr); grid-column-end: span 2; }
+	.xl-col-three		{ grid-template-columns: repeat(3, 1fr); grid-column-end: span 3; }
+	.xl-col-four		{ grid-template-columns: repeat(4, 1fr); grid-column-end: span 4; }
+	.xl-col-five		{ grid-template-columns: repeat(5, 1fr); grid-column-end: span 5; }
+	.xl-col-six 		{ grid-template-columns: repeat(6, 1fr); grid-column-end: span 6; }
+	.xl-col-seven		{ grid-template-columns: repeat(7, 1fr); grid-column-end: span 7; }
+	.xl-col-eight		{ grid-template-columns: repeat(8, 1fr); grid-column-end: span 8; }
+	.xl-col-nine		{ grid-template-columns: repeat(9, 1fr); grid-column-end: span 9; }
+	.xl-col-ten			{ grid-template-columns: repeat(10, 1fr); grid-column-end: span 10; }
+	.xl-col-eleven		{ grid-template-columns: repeat(11, 1fr); grid-column-end: span 11; }
+	.xl-col-twelve		{ grid-template-columns: repeat(12, 1fr); grid-column-end: span 12; }
+
+	.xl-offset-one		{ grid-column-start: 2; }
+	.xl-offset-two		{ grid-column-start: 3; }
+	.xl-offset-three	{ grid-column-start: 4; }
+	.xl-offset-four		{ grid-column-start: 5; }
+	.xl-offset-five		{ grid-column-start: 6; }
+	.xl-offset-six		{ grid-column-start: 7; }
+	.xl-offset-seven	{ grid-column-start: 8; }
+	.xl-offset-eight	{ grid-column-start: 9; }
+	.xl-offset-nine		{ grid-column-start: 10; }
+	.xl-offset-ten		{ grid-column-start: 11; }
+	.xl-offset-eleven	{ grid-column-start: 12; }
+}
+
+.grid .newLine { grid-column-start: 1; }
